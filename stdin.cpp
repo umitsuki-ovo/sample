@@ -6,7 +6,7 @@ int main(void){
     cin >> n;
     cout << n << endl;
   
-    vector <int> a(n);
+    vector <string> a(n);
     for (int i = 0; i < n; i++) {
         cin >> a[i];
     }
