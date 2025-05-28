@@ -1,6 +1,6 @@
 #include <stdio.h>  // 標準入出力ライブラリのインクルード
 
-int main() {
+int main(void) {
     int n;  // 入力される文字列の個数
 
     scanf("%d", &n);      // ユーザーから整数nを入力として受け取る
