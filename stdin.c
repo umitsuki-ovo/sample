@@ -1,17 +1,24 @@
-#include <stdio.h>
+#include <stdio.h>  // 標準入出力ライブラリのインクルード
 
 int main() {
-    int n;
-    scanf("%d", &n);
-    printf("%d\n", n);
+    int n;  // 入力される文字列の個数
 
+    scanf("%d", &n);      // ユーザーから整数nを入力として受け取る
+    printf("%d\n", n);    // 入力されたnの値を出力
+
+    // 文字列を格納する2次元配列
+    // n個の文字列を格納し、それぞれ最大99文字まで（+1文字は終端記号 '\0' 用）
     char data[n][100];
+
+    // n回繰り返して、各文字列を標準入力から読み取る
     for (int i = 0; i < n; i++) {
-        scanf("%s", data[i]);
-    }
-    for (int i = 0; i < n; i++) {
-        printf("%s ", data[i]);
+        scanf("%s", data[i]);  // 各文字列を配列dataに格納（空白で区切られる単語のみ）
     }
 
-    return 0;
+    // 読み取った文字列を1行にスペース区切りで出力
+    for (int i = 0; i < n; i++) {
+        printf("%s ", data[i]);  // 各文字列を出力
+    }
+
+    return 0;  // プログラムの終了
 }
